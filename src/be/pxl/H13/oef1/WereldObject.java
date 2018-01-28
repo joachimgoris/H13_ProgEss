@@ -5,6 +5,7 @@ public abstract class WereldObject extends Punt{
 	
 	public WereldObject(int x, int y) {
 		super(x, y);
+		Positie = new Punt(x,y);
 	}
 
 	public void setX(int x){
@@ -25,11 +26,9 @@ public abstract class WereldObject extends Punt{
 	
 	public double berekenAfstand(WereldObject wo) {
 		double retvalue;
-		
+		retvalue = this.Positie.berekenAfstand(wo.Positie);
 		return retvalue;
 	}
 	
-	public void beschrijf() {
-		
-	}
+	public abstract void beschrijf();
 }

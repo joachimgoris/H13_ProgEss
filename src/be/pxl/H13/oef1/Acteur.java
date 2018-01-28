@@ -1,10 +1,12 @@
 package be.pxl.H13.oef1;
 
-public class Acteur extends WereldObject implements Beweegbaar {
+public abstract class Acteur extends WereldObject implements Beweegbaar {
 	
 	public Acteur(int x, int y) {
 		super(x, y);
 	}
+	
+	public abstract String Interageer(WereldObject wo);
 
 	@Override
 	public void stapLinks() {
